@@ -57,7 +57,22 @@ window.addEventListener('load', (event) => {
 
                 return
 			} else {
-                
+                if (memoryGame.pickedCards.length < 2) {
+                    card.classList.add('turned')
+                    memoryGame.pickedCards.push(card)
+                }
+                if (memoryGame.pickedCards.length === 2) {
+                    if(!memoryGame.checkIfPair(memoryGame.pickedCards[0], memoryGame.pickedCards[1])){
+                        const card1 = memoryGame.pickedCards[0]
+                        const card2 = memoryGame.pickedCards[1]
+                        setTimeout(() => {
+                            card1.classList.remove('turned');
+                            card2.classList.remove('turned');
+                        }, 1000)
+                    }
+
+                    memoryGame.pickedCards = [];
+                }
             }
 		});
 	});
