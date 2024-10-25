@@ -10,7 +10,7 @@ const cards = [
 	{ name: 'stojak', img: 'stojak.png' },
 	{ name: 'szalka petriego', img: 'szalka-petriego.png' },
 	{ name: 'termometr', img: 'termometr.png' },
-	{ name: 'zlewka', img: 'zlewka' },
+	{ name: 'zlewka', img: 'zlewka.png' },
 	{ name: 'cylinder miarowy', img: 'cylinder-miarowy.png' },
 	{ name: 'kolba', img: 'kolba.png' },
 	{ name: 'lejek', img: 'lejek.png' },
@@ -22,7 +22,7 @@ const cards = [
 	{ name: 'stojak', img: 'stojak.png' },
 	{ name: 'szalka petriego', img: 'szalka-petriego.png' },
 	{ name: 'termometr', img: 'termometr.png' },
-	{ name: 'zlewka', img: 'zlewka' },
+	{ name: 'zlewka', img: 'zlewka.png' },
 ];
 
 const memoryGame = new MemoryGame(cards);
@@ -36,7 +36,7 @@ window.addEventListener('load', (event) => {
 		html += `
         <div class='card' data-card-name='${pic.name}'>
             <div class='back' name='${pic.img}'></div>
-            <div class='front' style='background: url(img/${pic.img}) no-repeat'></div>
+            <div class='front' style='background: url(img/${pic.img}) no-repeat; background-size: 80px 80px; background-position: center'></div>
         </div>
         `;
 	});
